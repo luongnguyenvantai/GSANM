@@ -1,0 +1,439 @@
+
+Log started: 2024-09-26  14:25:35
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-26  14:25:37
+
+Log started: 2024-09-26  15:16:56
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-26  15:16:58
+
+Log started: 2024-09-26  16:12:38
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-26  16:12:40
+
+Log started: 2024-09-27  02:12:36
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-27  02:12:38
+
+Log started: 2024-09-27  04:53:27
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-27  04:53:29
+
+Log started: 2024-09-27  06:59:49
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-27  06:59:51
+
+Log started: 2024-09-27  07:59:35
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-27  07:59:38
+
+Log started: 2024-09-30  08:22:37
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-09-30  08:22:39
+
+Log started: 2024-10-07  01:52:46
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-10-07  01:52:50
+
+Log started: 2024-10-09  12:15:35
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-10-09  12:15:42
+
+Log started: 2024-10-11  08:03:24
+Selecting previously unselected package libestr0:amd64.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11086 files and directories currently installed.)
+Preparing to unpack .../libestr0_0.1.11-1build1_amd64.deb ...
+Unpacking libestr0:amd64 (0.1.11-1build1) ...
+Selecting previously unselected package libfastjson4:amd64.
+Preparing to unpack .../libfastjson4_1.2304.0-1build1_amd64.deb ...
+Unpacking libfastjson4:amd64 (1.2304.0-1build1) ...
+Selecting previously unselected package libpopt0:amd64.
+Preparing to unpack .../libpopt0_1.19+dfsg-1build1_amd64.deb ...
+Unpacking libpopt0:amd64 (1.19+dfsg-1build1) ...
+Selecting previously unselected package logrotate.
+Preparing to unpack .../logrotate_3.21.0-2build1_amd64.deb ...
+Unpacking logrotate (3.21.0-2build1) ...
+Selecting previously unselected package rsyslog.
+Preparing to unpack .../rsyslog_8.2312.0-3ubuntu9_amd64.deb ...
+Unpacking rsyslog (8.2312.0-3ubuntu9) ...
+Setting up libestr0:amd64 (0.1.11-1build1) ...
+Setting up libfastjson4:amd64 (1.2304.0-1build1) ...
+Setting up rsyslog (8.2312.0-3ubuntu9) ...
+info: Adding user `syslog' to group `adm' ...
+debconf: unable to initialize frontend: Dialog
+debconf: (No usable dialog-like program is installed, so the dialog based frontend cannot be used. at /usr/share/perl5/Debconf/FrontEnd/Dialog.pm line 79.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (Can't locate Term/ReadLine.pm in @INC (you may need to install the Term::ReadLine module) (@INC entries checked: /etc/perl /usr/local/lib/x86_64-linux-gnu/perl/5.38.2 /usr/local/share/perl/5.38.2 /usr/lib/x86_64-linux-gnu/perl5/5.38 /usr/share/perl5 /usr/lib/x86_64-linux-gnu/perl-base /usr/lib/x86_64-linux-gnu/perl/5.38 /usr/share/perl/5.38 /usr/local/lib/site_perl) at /usr/share/perl5/Debconf/FrontEnd/Readline.pm line 8.)
+debconf: falling back to frontend: Teletype
+
+Creating config file /etc/rsyslog.d/50-default.conf with new version
+Created symlink /etc/systemd/system/multi-user.target.wants/dmesg.service → /usr/lib/systemd/system/dmesg.service.
+Created symlink /etc/systemd/system/syslog.service → /usr/lib/systemd/system/rsyslog.service.
+Created symlink /etc/systemd/system/multi-user.target.wants/rsyslog.service → /usr/lib/systemd/system/rsyslog.service.
+Setting up libpopt0:amd64 (1.19+dfsg-1build1) ...
+Setting up logrotate (3.21.0-2build1) ...
+Created symlink /etc/systemd/system/timers.target.wants/logrotate.timer → /usr/lib/systemd/system/logrotate.timer.
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-10-11  08:03:27
+
+Log started: 2024-10-11  08:19:17
+Selecting previously unselected package nano.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11189 files and directories currently installed.)
+Preparing to unpack .../nano_7.2-2build1_amd64.deb ...
+Unpacking nano (7.2-2build1) ...
+Setting up nano (7.2-2build1) ...
+update-alternatives: using /bin/nano to provide /usr/bin/editor (editor) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/editor.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group editor) doesn't exist
+update-alternatives: using /bin/nano to provide /usr/bin/pico (pico) in auto mode
+update-alternatives: warning: skip creation of /usr/share/man/man1/pico.1.gz because associated file /usr/share/man/man1/nano.1.gz (of link group pico) doesn't exist
+Log ended: 2024-10-11  08:19:18
+
+Log started: 2024-10-11  08:19:24
+Selecting previously unselected package sudo.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 11262 files and directories currently installed.)
+Preparing to unpack .../sudo_1.9.15p5-3ubuntu5_amd64.deb ...
+Unpacking sudo (1.9.15p5-3ubuntu5) ...
+Setting up sudo (1.9.15p5-3ubuntu5) ...
+Processing triggers for libc-bin (2.39-0ubuntu8.3) ...
+Log ended: 2024-10-11  08:19:25

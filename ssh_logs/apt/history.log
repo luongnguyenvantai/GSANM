@@ -1,0 +1,65 @@
+
+Start-Date: 2025-09-26  14:25:35
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-26  14:25:37
+
+Start-Date: 2025-09-26  15:16:56
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-26  15:16:58
+
+Start-Date: 2025-09-26  16:12:38
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-26  16:12:40
+
+Start-Date: 2025-09-27  02:12:36
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-27  02:12:38
+
+Start-Date: 2025-09-27  04:53:27
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-27  04:53:29
+
+Start-Date: 2025-09-27  06:59:49
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-27  06:59:51
+
+Start-Date: 2025-09-27  07:59:35
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-27  07:59:38
+
+Start-Date: 2025-09-30  08:22:37
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-09-30  08:22:39
+
+Start-Date: 2025-10-07  01:52:46
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-10-07  01:52:50
+
+Start-Date: 2025-10-09  12:15:35
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-10-09  12:15:42
+
+Start-Date: 2025-10-11  08:03:24
+Commandline: apt-get install -y rsyslog
+Install: libpopt0:amd64 (1.19+dfsg-1build1, automatic), logrotate:amd64 (3.21.0-2build1, automatic), libfastjson4:amd64 (1.2304.0-1build1, automatic), rsyslog:amd64 (8.2312.0-3ubuntu9), libestr0:amd64 (0.1.11-1build1, automatic)
+End-Date: 2025-10-11  08:03:27
+
+Start-Date: 2025-10-11  08:19:17
+Commandline: apt-get install -y nano
+Install: nano:amd64 (7.2-2build1)
+End-Date: 2025-10-11  08:19:18
+
+Start-Date: 2025-10-11  08:19:24
+Commandline: apt-get install -y sudo
+Install: sudo:amd64 (1.9.15p5-3ubuntu5)
+End-Date: 2025-10-11  08:19:25

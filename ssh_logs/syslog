@@ -1,0 +1,71 @@
+2024-09-26T14:26:38.594850+00:00 483e655f82dc rsyslogd: rsyslogd's groupid changed to 103
+2024-09-26T14:26:38.594878+00:00 483e655f82dc rsyslogd: rsyslogd's userid changed to 102
+2024-09-26T14:26:38.594881+00:00 483e655f82dc rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="381" x-info="https://www.rsyslog.com"] start
+2024-09-26T15:17:56.772562+00:00 7abb88ba40cb rsyslogd: rsyslogd's groupid changed to 103
+2024-09-26T15:17:56.772594+00:00 7abb88ba40cb rsyslogd: rsyslogd's userid changed to 102
+2024-09-26T15:17:56.772596+00:00 7abb88ba40cb rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="382" x-info="https://www.rsyslog.com"] start
+2024-09-26T16:13:48.345912+00:00 1d0fe8afd4df rsyslogd: rsyslogd's groupid changed to 103
+2024-09-26T16:13:48.345962+00:00 1d0fe8afd4df rsyslogd: rsyslogd's userid changed to 102
+2024-09-26T16:13:48.345965+00:00 1d0fe8afd4df rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="382" x-info="https://www.rsyslog.com"] start
+2024-09-27T02:13:37.040471+00:00 a76eb39ff6db rsyslogd: rsyslogd's groupid changed to 103
+2024-09-27T02:13:37.040518+00:00 a76eb39ff6db rsyslogd: rsyslogd's userid changed to 102
+2024-09-27T02:13:37.040522+00:00 a76eb39ff6db rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="390" x-info="https://www.rsyslog.com"] start
+2024-09-27T04:54:50.719904+00:00 bd03950b75dc rsyslogd: rsyslogd's groupid changed to 103
+2024-09-27T04:54:50.719927+00:00 bd03950b75dc rsyslogd: rsyslogd's userid changed to 102
+2024-09-27T04:54:50.719929+00:00 bd03950b75dc rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="392" x-info="https://www.rsyslog.com"] start
+2024-09-27T07:01:49.015305+00:00 b546a6ce0b04 rsyslogd: rsyslogd's groupid changed to 103
+2024-09-27T07:01:49.015325+00:00 b546a6ce0b04 rsyslogd: rsyslogd's userid changed to 102
+2024-09-27T07:01:49.015328+00:00 b546a6ce0b04 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="382" x-info="https://www.rsyslog.com"] start
+2024-09-27T08:00:56.988218+00:00 eba14333c345 rsyslogd: rsyslogd's groupid changed to 103
+2024-09-27T08:00:56.988249+00:00 eba14333c345 rsyslogd: rsyslogd's userid changed to 102
+2024-09-27T08:00:56.988251+00:00 eba14333c345 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="382" x-info="https://www.rsyslog.com"] start
+2024-09-27T08:17:56.443110+00:00 eba14333c345 rsyslogd: rsyslogd's groupid changed to 103
+2024-09-27T08:17:56.443152+00:00 eba14333c345 rsyslogd: rsyslogd's userid changed to 102
+2024-09-27T08:17:56.443154+00:00 eba14333c345 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="40" x-info="https://www.rsyslog.com"] start
+2024-09-30T08:23:45.252838+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-09-30T08:23:45.252871+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-09-30T08:23:45.252874+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="390" x-info="https://www.rsyslog.com"] start
+2024-09-30T13:44:12.852018+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-09-30T13:44:12.852051+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-09-30T13:44:12.852054+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="68" x-info="https://www.rsyslog.com"] start
+2024-10-01T01:21:57.182950+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-10-01T01:21:57.182969+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-10-01T01:21:57.182971+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="15" x-info="https://www.rsyslog.com"] start
+2024-10-01T05:58:53.695050+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-10-01T05:58:53.695082+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-10-01T05:58:53.695084+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="18" x-info="https://www.rsyslog.com"] start
+2024-10-03T06:53:30.216074+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-10-03T06:53:30.216096+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-10-03T06:53:30.216098+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="114" x-info="https://www.rsyslog.com"] start
+2024-10-04T01:26:20.649387+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-10-04T01:26:20.649408+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-10-04T01:26:20.649410+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="18" x-info="https://www.rsyslog.com"] start
+2024-10-04T06:02:27.465737+00:00 547497028c3e rsyslogd: rsyslogd's groupid changed to 103
+2024-10-04T06:02:27.465760+00:00 547497028c3e rsyslogd: rsyslogd's userid changed to 102
+2024-10-04T06:02:27.465762+00:00 547497028c3e rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="16" x-info="https://www.rsyslog.com"] start
+2024-10-07T01:54:17.850731+00:00 0c3efbee7993 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-07T01:54:17.850771+00:00 0c3efbee7993 rsyslogd: rsyslogd's userid changed to 102
+2024-10-07T01:54:17.850774+00:00 0c3efbee7993 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="731" x-info="https://www.rsyslog.com"] start
+2024-10-09T03:25:56.019717+00:00 0c3efbee7993 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-09T03:25:56.019745+00:00 0c3efbee7993 rsyslogd: rsyslogd's userid changed to 102
+2024-10-09T03:25:56.019749+00:00 0c3efbee7993 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="142" x-info="https://www.rsyslog.com"] start
+2024-10-09T06:10:22.596268+00:00 0c3efbee7993 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-09T06:10:22.596296+00:00 0c3efbee7993 rsyslogd: rsyslogd's userid changed to 102
+2024-10-09T06:10:22.596300+00:00 0c3efbee7993 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="238" x-info="https://www.rsyslog.com"] start
+2024-10-09T06:59:31.684573+00:00 0c3efbee7993 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-09T06:59:31.684595+00:00 0c3efbee7993 rsyslogd: rsyslogd's userid changed to 102
+2024-10-09T06:59:31.684597+00:00 0c3efbee7993 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="129" x-info="https://www.rsyslog.com"] start
+2024-10-09T12:16:23.170724+00:00 b93e13cbb228 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-09T12:16:23.170745+00:00 b93e13cbb228 rsyslogd: rsyslogd's userid changed to 102
+2024-10-09T12:16:23.170748+00:00 b93e13cbb228 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="481" x-info="https://www.rsyslog.com"] start
+2024-10-10T09:16:31.062769+00:00 b93e13cbb228 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-10T09:16:31.062790+00:00 b93e13cbb228 rsyslogd: rsyslogd's userid changed to 102
+2024-10-10T09:16:31.062793+00:00 b93e13cbb228 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="181" x-info="https://www.rsyslog.com"] start
+2024-10-10T15:03:15.285476+00:00 b93e13cbb228 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-10T15:03:15.285484+00:00 b93e13cbb228 rsyslogd: rsyslogd's userid changed to 102
+2024-10-10T15:03:15.285488+00:00 b93e13cbb228 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="53" x-info="https://www.rsyslog.com"] start
+2024-10-11T08:04:17.890197+00:00 9f80ef47d101 rsyslogd: imklog: cannot open kernel log (/proc/kmsg): Operation not permitted.
+2024-10-11T08:04:17.890246+00:00 9f80ef47d101 rsyslogd: activation of module imklog failed [v8.2312.0 try https://www.rsyslog.com/e/2145 ]
+2024-10-11T08:04:17.890249+00:00 9f80ef47d101 rsyslogd: rsyslogd's groupid changed to 103
+2024-10-11T08:04:17.890254+00:00 9f80ef47d101 rsyslogd: rsyslogd's userid changed to 102
+2024-10-11T08:04:17.890258+00:00 9f80ef47d101 rsyslogd: [origin software="rsyslogd" swVersion="8.2312.0" x-pid="606" x-info="https://www.rsyslog.com"] start
