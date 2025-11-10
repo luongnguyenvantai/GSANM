@@ -1,77 +1,114 @@
-# Docker-ELK
+# SABDA: Stateful Anomaly Behavior Detection & Analysis
 
+Run a real-time log anomaly detection system using Graylog, InfluxDB, Grafana, and a custom Python analysis core.
 
-Run the latest version of the ELK (Elasticsearch, Logstash, Kibana) stack with Docker and Docker Compose.
+This stack gives you the ability to analyze system logs (SSH, Apache) in real-time. It leverages a stateful Machine Learning model to detect behavioral anomalies (such as Brute-force, Web Scanning, and SQL Injection) and visualizes these threats on a live Grafana dashboard.
 
-The elk stack will give you the ability to analyze any data set by using the searching/aggregation capabilities of Elasticsearch
-and the visualization power of Kibana.
+Based on official Docker images and technologies:
 
-Based on the official Docker images:
+* [Graylog](https://www.graylog.org/) (Assumed to be pre-installed)
+* [InfluxDB](https://www.influxdata.com/)
+* [Grafana](https://grafana.com/)
+* [Python](https://www.python.org/) (with Scikit-learn)
 
-* [elasticsearch](https://www.elastic.co/elasticsearch/)
-* [logstash](https://www.elastic.co/logstash/)
-* [kibana](https://www.elastic.co/kibana)
+## SABDA Core (Python)
 
-APM Monitoring:
+* **`src/anomaly_detector.py`**: This is the 'brain' of the system. This Python script periodically pulls logs from the Graylog API, parses them, and performs **Stateful Feature Engineering** to build 4-dimensional behavior vectors for each IP. A pre-trained Random Forest model (`rf_model.joblib`) then classifies these vectors as 'normal' or 'anomaly'. All results (both normal and abnormal) are pushed to InfluxDB.
 
-* [apm](https://www.elastic.co/apm)
+## Setup the Stack
 
-Beats:
+The configuration for the InfluxDB and Grafana containers is in `docker-compose.yml`.
 
-* [filebeat](https://www.elastic.co/beats/filebeat)
-* [heartbeat](https://www.elastic.co/beats/heartbeat)
-* [metricbeat](https://www.elastic.co/beats/metricbeat)
+The configuration for the Python script (API tokens for Graylog and InfluxDB) is managed via the `.env` file. Please copy `.env.example` to `.env` and fill in your credentials.
 
-# Setup the stack
-
-The configuration for each container are placed on the root of this folder, then {{ container }}/config/{{ configuration }}.yml
-The beats are shipped with basic configuration, for advanced configurations and for enable other modules see the reference configurations files on Elastic official documentation.
-
-# Notes
+## Notes
 
 By default:
 
-* filebeat monitor the container logs in /var/lib/docker/containers. Also filebeat is configured with add_docker_metadata processor and need access to /var/run/docker.sock
-* heartbeat monitor elastic and kibana container
-* metricbeat monitor the container that are running on the machine (the conainer needs access to /var/run/docker.sock and the metricbeat user should be in the docker group. See metricbeat/Dockerfile and adjust the GID of the Docker group. Or run the container as root user.) 
+* The `anomaly_detector.py` script runs in a **1-minute time window**.
+* It queries the Graylog API to fetch all logs from the last minute.
+* It is configured to parse `sshd` logs (for Brute-force) and `apache` access logs (for Web Scanning/SQLi).
+* It pushes *all* calculated behavior metrics (e.g., `ssh_failed_count`, `http_404_count`) to InfluxDB. This allows Grafana to plot both normal and abnormal behavior over time.
 
-# Licence
+## License
 
-By default the stack starts paid features disabled `xpack.license.self_generated.type: basic` in elssticsearch.yml.
-You can enable the trial by changing the value of `xpack.license.self_generated.type` to trial, and use the full fatures for 30 days. 
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-For more information about the Licence see:
+## Fire up the stack
 
-[xpack]: https://www.elastic.co/what-is/open-x-pack
-[paid-features]: https://www.elastic.co/subscriptions
-[trial-license]: https://www.elastic.co/guide/en/elasticsearch/reference/current/license-settings.html
+This guide assumes you have a **running Graylog instance** and its Docker network name.
 
-# Fire up the stack
+1.  **Clone this repository**
+    ```bash
+    git clone <your-repo-url>
+    cd SABDA_Project
+    ```
 
-1. Clone this repository
+2.  **Configure Infrastructure**
+    * Open `docker-compose.yml`.
+    * Find the `networks:` -> `graylog-net:` -> `name:` section at the bottom.
+    * Change `graylog-docker_default` to the **actual network name** of your Graylog Docker stack. (You can find this with `docker network ls`).
 
-2. set the right version of ELK stack on the .env file
+3.  **Start Infrastructure (InfluxDB & Grafana)**
+    ```console
+    $ docker-compose up -d
+    ```
 
-3. build the stack with `docker-compose build`
+4.  **Configure InfluxDB (First-time setup)**
+    * Navigate to `http://localhost:8086`.
+    * Complete the setup wizard:
+        * Create Organization: (e.g., `NhomNghienCuu`)
+        * Create Bucket: (e.g., `log_anomaly`)
+        * Generate a **Write**-permission API Token for the `log_anomaly` bucket.
+    * **Copy this new Token.**
 
-4. Start the ELK stack using `docker-compose`:
+5.  **Configure Grafana (First-time setup)**
+    * Navigate to `http://localhost:3000` (default login: admin/admin).
+    * **Add Data Source:**
+        * Go to Connections -> Data Sources -> Add InfluxDB.
+        * Query Language: `Flux`.
+        * URL: `http://influxdb:8086` (This works because they are on the same Docker network).
+        * Fill in your Organization, Bucket (`log_anomaly`), and the **InfluxDB Token** you just copied.
+        * Click "Save & Test".
+    * **Import Dashboards:**
+        * Go to Dashboards -> Import.
+        * Upload the `.json` files located in the `/grafana_dashboards` directory.
 
-```console
-$ docker-compose up -d
-```
+6.  **Configure Python Core**
+    * Create a Python virtual environment:
+        ```bash
+        python -m venv env
+        source env/bin/activate
+        ```
+    * Install dependencies:
+        ```bash
+        pip install -r requirements.txt
+        ```
+    * Create your environment file:
+        ```bash
+        cp .env.example .env
+        ```
+    * Edit `.env` and paste your `GRAYLOG_TOKEN` and `INFLUX_TOKEN`.
 
-Give Kibana a few seconds to initialize, then access the Kibana web UI by hitting
-[http://localhost:5601](http://localhost:5601) with a web browser.
+7.  **Train the Model (Run once)**
+    ```console
+    $ python src/anomaly_detector.py 1
+    ```
+    This will create the `models/rf_model.joblib` file.
+
+8.  **Run Real-time Detection**
+    ```console
+    $ python src/anomaly_detector.py 2
+    ```
+    The script is now running, analyzing logs every minute, and pushing data to InfluxDB. Your Grafana dashboard should now be live with data.
 
 By default, the stack exposes the following ports:
-* 5000: Logstash TCP input.
-* 9200: Elasticsearch HTTP
-* 9300: Elasticsearch TCP transport
-* 5601: Kibana
-* 8200: apm
+* `8086`: InfluxDB API and UI
+* `3000`: Grafana UI
+* (Your Graylog ports, e.g., `9000`, `5140`)
 
-# Clean up
+## Clean up
 
+To stop the InfluxDB and Grafana containers created by this project:
 ```console
 $ docker-compose down -v
-```
