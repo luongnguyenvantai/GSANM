@@ -1,0 +1,50 @@
+filebeat.modules:
+  - module: system
+    syslog:
+      enabled: true
+    auth:
+      enabled: true
+      var.paths: ["/var/log/auth.log", "/var/log/secure"]
+
+  - module: apache
+    access:
+      enabled: true
+      var.paths: ["/var/log/apache2/access.log"]
+    error:
+      enabled: true
+      var.paths: ["/var/log/apache2/error.log"]
+
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
+    - /var/log/ssh_logs/auth.log
+    - /var/log/secure
+  processors:
+    - add_docker_metadata: ~
+
+- type: container
+  enabled: true
+  paths:
+    - /var/lib/docker/containers/*/*.log
+  stream: all
+  processors:
+   - add_docker_metadata: ~
+
+output.logstash:
+
+  hosts: ["logstash:5044"]  
+
+setup.kibana:
+  host: "kibana:5601"
+
+logging.level: debug  
+
+processors:
+  - add_host_metadata: 
+      netinfo.enabled: false
+  - add_docker_metadata:
+      host: "unix:///var/run/docker.sock"
+
+setup.dashboards.enabled: true
