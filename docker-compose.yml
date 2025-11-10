@@ -1,0 +1,162 @@
+services:
+
+  mongodb:
+
+    image: mongo:7.0
+    container_name: mongo
+    restart: always
+    ports:
+      - "27017:27017"
+    networks:
+
+      - graylog
+
+    volumes:
+
+      - mongo_data:/data/db
+
+
+  opensearch:
+
+    image: opensearchproject/opensearch:2.11.1
+    container_name: opensearch
+    environment:
+
+      - discovery.type=single-node
+
+      - bootstrap.memory_lock=true
+
+      - "OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m"
+
+      - plugins.security.disabled=true
+
+    ulimits:
+
+      memlock:
+
+        soft: -1
+        hard: -1
+
+    volumes:
+
+      - os_data:/usr/share/opensearch/data
+
+    ports:
+
+      - "9200:9200"
+      - "9600:9600"
+    restart: always
+    networks:
+
+      - graylog
+
+
+
+  graylog:
+
+    image: graylog/graylog:6.0
+    container_name: graylog
+    environment:
+
+      - GRAYLOG_PASSWORD_SECRET=somepasswordpepper
+
+      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc>
+
+      - GRAYLOG_HTTP_EXTERNAL_URI=http://127.0.0.1:9000/
+
+      - GRAYLOG_OPENSEARCH_HOSTS=http://opensearch:9200
+
+      - GRAYLOG_MONGODB_URI=mongodb://mongo:27017/graylog
+
+      - GRAYLOG_ELASTICSEARCH_HOSTS=http://opensearch:9200
+
+      - GRAYLOG_ELASTICSEARCH_CONNECT_TIMEOUT=30s
+
+      - GRAYLOG_ELASTICSEARCH_SOCKET_TIMEOUT=60s
+      - GRAYLOG_ELASTICSEARCH_MAX_RETRIES=10
+
+    depends_on:
+
+      - mongodb
+
+      - opensearch
+
+    ports:
+
+      - "9000:9000"   # Web UI
+
+      - "1514:1514"   # Syslog TCP
+
+      - "1514:1514/udp"
+
+      - "12201:12201" # GELF TCP
+      - "12201:12201/udp"
+      - "5044:5044"
+
+    restart: always
+    networks:
+
+      - graylog
+
+  influxdb:
+    image: influxdb:2.7
+    container_name: influxdb
+    restart: unless-stopped
+    ports:
+      - "8086:8086" 
+    volumes:
+      - influxdb_data:/var/lib/influxdb2
+    networks:
+      - graylog
+
+  graylog-datanode:
+    image: graylog/graylog-datanode:6.0
+    container_name: datanote
+    restart: always
+    depends_on:
+      - opensearch
+      - mongodb
+
+    environment:
+      - GRAYLOG_NODE_ID_FILE=/usr/share/graylog-datanode/data/node-id
+      - GRAYLOG_DATANODE_OPENSEARCH_HOSTS=https://opensearch:9200
+      - GRAYLOG_DATANODE_PASSWORD_SECRET=somepasswordpepper
+      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc>
+      - GRAYLOG_DATANODE_DISABLE_TLS= "true"
+
+    volumes:
+      - datanode_data:/usr/share/graylog-datanode/data
+    ports:
+      - "9201:9200" #cong opensearch cho datanote
+
+  grafana:
+    image: grafana/grafana:10.4.1
+    container_name: grafana
+    restart: always
+    networks:
+      - graylog
+    depends_on:
+      - opensearch
+    ports:
+      - "3000:3000"
+    environment:
+      - GF_SECURITY_ADMIN_USER=admin
+      - GF_SECURITY_ADMIN_PASSWORD=admin
+    volumes:
+      - grafana_data:/var/lib/grafana
+volumes:
+  mongo_data:
+  os_data:
+  datanode_data:
+  grafana_data:
+  influxdb_data: {}
+
+
+networks:
+
+  graylog:
+
+    driver: bridge
+  default:
+    name: graylog-network
+

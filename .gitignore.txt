@@ -1,0 +1,17 @@
+# Python cache
+*.pyc
+__pycache__/
+
+# Môi trường ảo
+env/
+venv/
+
+# File biến môi trường (Rất quan trọng!)
+.env
+
+# Dữ liệu Docker (không bao giờ đẩy lên Git)
+influxdb_data/
+grafana_data/
+graylog_data/
+mongo_data/
+opensearch_data/
