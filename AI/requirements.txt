@@ -1,0 +1,6 @@
+scikit-learn
+joblib
+numpy
+requests
+influxdb-client
+python-dotenv
