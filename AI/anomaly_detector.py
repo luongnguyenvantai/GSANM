@@ -20,7 +20,7 @@ MODEL_FILE = 'rf_model.joblib'
 
 # Cấu hình InfluxDB
 INFLUX_URL = "http://127.0.0.1:8086"  
-INFLUX_TOKEN = "gRGTniu9_IOXt-L5WLNZPLAZ8NRI-wKUTnZf4IModL2rXq8AzZ6byXpBDXpCPIH>
+INFLUX_TOKEN = "gRGTniu9_IOXt-L5WLNZPLAZ8NRI-wKUTnZf4IModL2rXq8AzZ6byXpBDXpCPIH"
 INFLUX_ORG = "NhomNghienCuu"
 INFLUX_BUCKET = "log_anomaly"
 
@@ -45,7 +45,7 @@ def get_graylog_logs(minutes=1, limit=10000):
         )
         response.raise_for_status()
         messages = response.json().get("messages", [])
-        logs = [msg["message"]["message"] for msg in messages if "message" in m>
+        logs = [msg["message"]["message"] for msg in messages if "message" in msg["message"]]
         return logs
     except Exception as e:
         print(f"[ERROR] Không thể kết nối đến Graylog API: {e}")
@@ -55,12 +55,12 @@ def get_graylog_logs(minutes=1, limit=10000):
 # HÀM LOG PARSING 
 # -----------------------------
 # SSH Patterns
-SSH_FAILED_PATTERN = re.compile(r'sshd\[\d+\]: Failed password for (invalid use>
-SSH_SUCCESS_PATTERN = re.compile(r'sshd\[\d+\]: Accepted password for (.*?) fro>
+SSH_FAILED_PATTERN = re.compile(r'sshd\[\d+\]: Failed password for (invalid user )?(.*?) from ([\d\.]+) port \d+ ssh2')
+SSH_SUCCESS_PATTERN = re.compile(r'sshd\[\d+\]: Accepted password for (.*?) from ([\d\.]+) port \d+ ssh2')
 
 # Web Attack Patterns
-APACHE_ACCESS_PATTERN = re.compile(r'([\d\.]+) - - \[(.*?)\] "(.*?)" (\d{3}) (\>
-SQLI_PATTERN = re.compile(r"('|%27).*?(OR|UNION).*?('|%27).*?\d+.*?(=|%3D).*?('>
+APACHE_ACCESS_PATTERN = re.compile(r'([\d\.]+) - - \[(.*?)\] "(.*?)" (\d{3}) (\d+|-)')
+SQLI_PATTERN = re.compile(r"(\'|\%27)\s*(OR|UNION)\s*(\'|\%27)\s*(\d+)\s*=\s*(\'|\%27)\s*(\d+)", re.IGNORECASE)
 
 def parse_log_message(log):
     """
@@ -108,7 +108,7 @@ def parse_log_message(log):
 def train_model():
     print("\n--- BAT DAU HUAN LUYEN (SUPERVISED - SSH + Web) ---")
     
-    # Đặc trưng: [ssh_fail_count, ssh_distinct_users, http_404_count, sqli_atte>
+    # Đặc trưng: [ssh_fail_count, ssh_distinct_users, http_404_count, sqli_attempt_count]
 
     # Mẫu hành vi bình thường 
     features_normal = [
@@ -131,9 +131,9 @@ def train_model():
     X_train = np.array(features_normal + features_attack)
     y_train = np.array(labels_normal + labels_attack)
     
-    print(f"[*] Đang huấn luyện mô hình RandomForest trên {len(X_train)} mẫu...>
+    print(f"[*] Đang huấn luyện mô hình RandomForest trên {len(X_train)} mẫu...")
     
-    model = RandomForestClassifier(n_estimators=100, random_state=42, class_wei>
+    model = RandomForestClassifier(n_estimators=100, random_state=42, class_weight='balanced')
     model.fit(X_train, y_train)
     
     joblib.dump(model, MODEL_FILE)
@@ -147,14 +147,14 @@ def detect_anomalies():
     print("[*] Đang tải mô hình RandomForest...")
     
     try:
-        client = InfluxDBClient(url=INFLUX_URL, token=INFLUX_TOKEN, org=INFLUX_>
+        client = InfluxDBClient(url=INFLUX_URL, token=INFLUX_TOKEN, org=INFLUX_ORG)
         write_api = client.write_api(write_options=SYNCHRONOUS)
         model = joblib.load(MODEL_FILE)
     except Exception as e:
-        print(f"[ERROR] Không thể khởi tạo. Hãy chạy chế độ TRAIN hoặc kiểm tra>
+        print(f"[ERROR] Không thể khởi tạo. Hãy chạy chế độ TRAIN hoặc kiểm tra InfluxDB. Lỗi: {e}")
         return
 
-    print("[*] Bắt đầu giám sát thời gian thực (Cửa sổ 1 phút). Nhấn Ctrl+C để >
+    print("[*] Bắt đầu giám sát thời gian thực (Cửa sổ 1 phút). Nhấn Ctrl+C để dừng.")
     
     try:
         while True:
@@ -179,7 +179,7 @@ def detect_anomalies():
 
 
             for log in logs:
-                if "' OR '1'='1'" in log or "%27%20OR%20%271%27%3D%271%27" in l>
+                if "' OR '1'='1'" in log or "%27%20OR%20%271%27%3D%271%27" in log:
                     print(f"--- DEBUG: Log goc nhan duoc co chua SQLi ---")
                     print(log) 
                     print(f"----------------------------------------")
@@ -225,11 +225,12 @@ def detect_anomalies():
 
             predictions = model.predict(np.array(feature_vectors))
 
-            print(f"[*] Đã xử lý {len(ips_in_window)} IP. Đang đẩy lên InfluxDB>
+            print(f"[*] Đã xử lý {len(ips_in_window)} IP. Đang đẩy lên InfluxDB...")
             
             # Vòng lặp đẩy dữ liệu lên InfluxDB
-            for ip, pred, features in zip(ips_in_window, predictions, feature_v>
+            for ip, pred, features in zip(ips_in_window, predictions, feature_vectors):
                 anomaly_status = int(pred) 
+                
                 point = Point("behavior_metrics") \
                     .tag("source_ip", ip) \
                     .field("ssh_failed_count", int(features[0])) \
@@ -238,7 +239,7 @@ def detect_anomalies():
                     .field("sqli_attempt_count", int(features[3])) \
                     .field("is_anomaly", anomaly_status) \
                     .time(datetime.now(timezone.utc)) 
-                write_api.write(bucket=INFLUX_BUCKET, org=INFLUX_ORG, record=po>
+                write_api.write(bucket=INFLUX_BUCKET, org=INFLUX_ORG, record=point)
 
                 if anomaly_status == 1:
                     print(f"CẢNH BÁO ĐÃ ĐẨY: IP {ip}, Features {features}")
