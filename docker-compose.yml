@@ -60,7 +60,7 @@ services:
 
       - GRAYLOG_PASSWORD_SECRET=somepasswordpepper
 
-      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc>
+      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc
 
       - GRAYLOG_HTTP_EXTERNAL_URI=http://127.0.0.1:9000/
 
@@ -121,7 +121,7 @@ services:
       - GRAYLOG_NODE_ID_FILE=/usr/share/graylog-datanode/data/node-id
       - GRAYLOG_DATANODE_OPENSEARCH_HOSTS=https://opensearch:9200
       - GRAYLOG_DATANODE_PASSWORD_SECRET=somepasswordpepper
-      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc>
+      - GRAYLOG_ROOT_PASSWORD_SHA2=8c6976e5b5410415bde908bd4dee15dfb167a9c873fc
       - GRAYLOG_DATANODE_DISABLE_TLS= "true"
 
     volumes:
